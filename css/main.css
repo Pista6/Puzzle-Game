@@ -1,0 +1,9 @@
+/*Hoja de estilos*/
+#svgFrame {
+	display: block;
+	margin: 0 auto;
+}
+
+#fullImage {
+	opacity: 0.6;
+}
