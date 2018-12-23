@@ -9,9 +9,6 @@ var winText = document.getElementById('winText');
 var seconds = 0, minutes = 0, hours = 0,
     param;
 
-// var initialWidth = [141,188,140,140,189,140,164,164,140];
-// var initialHeight = [166,134,163,164,192,148,165,165,166];
-
 var initialWidth = [213,289,213,213,288,213,250,250,213];
 var initialHeight = [179,142,179,179,217,143,142,142,179];
 
@@ -21,15 +18,15 @@ var currentY = 0;
 var currentElementPosx = 0;
 var currentElementPosy = 0;
 
-var destinationPosx = [200,304,466,200,333,437,200,304,466];   
-var destinationPosy = [100,100,100,233,204,233,337,366,337];
+var destinationPosx = [247,421,670,247,421,670,247,458,670];   
+var destinationPosy = [37,37,37,178,141,178,318,318,280];
 
 function setSizes(){
     for(var index = 0; index < puzzlePieces.length; index++){
         puzzlePieces[index].setAttribute("width", initialWidth[index]);
         puzzlePieces[index].setAttribute("height", initialHeight[index]);
-        puzzlePieces[index].setAttribute("x", Math.floor((Math.random() * 10) + 1));
-        puzzlePieces[index].setAttribute("y", Math.floor((Math.random() * 409) + 1));
+        puzzlePieces[index].setAttribute("x", Math.floor((Math.random() * 1) + 1));
+        puzzlePieces[index].setAttribute("y", Math.floor((Math.random() * 309) + 1));
         puzzlePieces[index].setAttribute("onmousedown","selectedElement(event)");
     }
 }
@@ -100,7 +97,7 @@ function testing() {
 		}
 	}
 	if(complete == 9){
-        winSong.play();
+        //winSong.play();
         clearTimeout(param);
         winText.textContent = 
         "Congratulation! You won in " + hours + " hours " + minutes + " minutes and " + seconds +" seconds!!!"
